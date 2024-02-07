@@ -3,7 +3,7 @@
 client_id = "91acbcade75e532802e562963a1b35ec"
 name = "shipping-service"
 handle = "shipping-service-4"
-application_url = "https://glenn-providers-cordless-route.trycloudflare.com"
+application_url = "https://heroes-reserves-roller-settled.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://glenn-providers-cordless-route.trycloudflare.com/auth/callback",
-  "https://glenn-providers-cordless-route.trycloudflare.com/auth/shopify/callback",
-  "https://glenn-providers-cordless-route.trycloudflare.com/api/auth/callback"
+  "https://heroes-reserves-roller-settled.trycloudflare.com/auth/callback",
+  "https://heroes-reserves-roller-settled.trycloudflare.com/auth/shopify/callback",
+  "https://heroes-reserves-roller-settled.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

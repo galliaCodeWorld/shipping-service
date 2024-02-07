@@ -20,3 +20,48 @@ model Session {
   accessToken String
   userId      BigInt?
 }
+
+model QRCode {
+  id               Int      @id @default(autoincrement())
+  title            String
+  shop             String
+  productId        String
+  productHandle    String
+  productVariantId String
+  destination      String
+  scans            Int      @default(0)
+  createdAt        DateTime @default(now())
+}
+
+model BookProduct{
+  id               Int      @id @default(autoincrement())
+  shop             String
+  productId        String
+  productHandle    String
+  productVariantId String
+  orders           Order[]
+}
+
+model Order{
+  id               Int      @id @default(autoincrement())
+  ltl              Boolean  @default(false)
+  shipperZip       String      
+  recipientZip     String   
+  weight           String
+  large            String
+  width            String
+  height           String
+  secure           Boolean  @default(false)
+  secureValue      Int      @default(0)
+  pickup           Boolean  @default(false)
+  international    Boolean  @default(false)
+  content          String
+  shipperCountry   String
+  shipperState     String
+  shipperCity      String
+  recipientCountry String
+  recipientState   String
+  recipientCity    String
+  curriers         BookProduct[]
+  createdAt        DateTime @default(now())
+}
